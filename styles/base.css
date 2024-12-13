@@ -1,0 +1,44 @@
+:root{
+    /*Primary*/
+    --pink: hsl(322, 100%, 66%);
+    /*Neutral */
+    --very-pale-cyan:hsl(193, 100%, 96%);
+    --very-dark-cyan:hsl(192, 100%, 9%);
+    --grayish-blue:hsl(208, 11%, 55%);
+    --nav-margin:20px;
+    --button-text-size:1.2rem;
+    --box-shadow:0px 0px 10px 0px #9b9797;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+body{
+    display: grid;
+    min-height: 100svh;
+    width: 100svw;
+    grid-template-rows: max-content;
+    container: body / inline-size;
+    margin: 0;
+    font-weight: 400;
+}
+main{
+    display: grid;
+    min-height: 100cqw;
+    width: 100cqw;
+    container: main / inline-size;
+    font-family: 'Open Sans';
+}
+header{
+    width: 100cqw;
+    height: 50px;
+    padding: 25px 0 25px 0;
+}
+svg[id="svgs"]{
+    display: none;
+}

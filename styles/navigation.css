@@ -1,0 +1,49 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+}
+
+section[class="logo-container"] {
+    grid-column: 2/3;
+    height: 50px;
+    width: 80%;
+}
+
+section[class="logo-container"] svg {
+    height: 100%;
+    width: 100%;
+}
+
+nav button {
+    grid-column: 9/10;
+    height: 50px;
+    background: white;
+    color: var(--very-dark-cyan);
+    border-radius: 30px;
+    font-size: var(--button-text-size);
+    font-weight: 700;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    text-wrap: nowrap;
+    border: 0;
+}
+
+nav button:hover {
+    filter: brightness(1.2);
+}
+
+@container(inline-size < 1000px) {
+    nav button {
+        grid-column: 8/-1;
+        font-size: 0.8rem;
+        height: 50%;
+        margin-right: 20px;
+        align-self: center;
+    }
+
+    section[class="logo-container"] {
+        grid-column: 1/4;
+        width: 100%;
+        margin-left: 20px;
+    }
+}

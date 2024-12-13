@@ -1,0 +1,82 @@
+section[class="hero-card"] {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    height: 40cqh;
+    justify-content: center;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+section[class="hero-card-text"] {
+    display: grid;
+    place-content: center;
+    color: var(--very-dark-cyan);
+    gap: 10px;
+}
+
+section[class="hero-card-text"] h1 {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: 700;
+    width: 70%;
+}
+
+section[class="hero-card-text"] button {
+    border: 0;
+    background: var(--pink);
+    color: var(--very-pale-cyan);
+    width: min-content;
+    padding: 10px 50px 10px 50px;
+    border-radius: 30px;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: var(--button-text-size);
+    box-shadow: var(--box-shadow);
+}
+
+section[class="hero-card-text"] button:hover {
+    filter: brightness(1.2);
+}
+
+section[class="hero-card-image"] svg {
+    width: 100%;
+    height: 100%;
+}
+
+section[class="hero-card"] picture {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    top: -100px;
+    background: var(--very-pale-cyan);
+    width: 100%;
+}
+
+@container (inline-size < 1000px) {
+    section[class="hero-card"] {
+        grid-template-columns: 1fr;
+        gap: 100px;
+        height: auto;
+    }
+
+    section[class="hero-card-text"] h1 {
+        font-size: 1.5rem;
+    }
+
+    section[class="hero-card-text"] {
+        text-align: center;
+        place-items: center;
+    }
+
+    section[class="hero-card-text"] span {
+        width: 80%;
+    }
+
+    section[class="hero-card"] picture {
+        height: auto;
+    }
+
+    section[class="hero-card-image"] svg {
+        transform: scale(150%);
+    }
+}
